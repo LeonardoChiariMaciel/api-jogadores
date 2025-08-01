@@ -8,18 +8,54 @@
     <title>Seleção PD Case</title>
 </head>
 <body class="fundo">
-
+ 
     <section id="agrupador-de-cards" class="d-flex flex-row flex-wrap gap-5 justify-content-center mt-5 mb-5">
-        <article class="article-jogador d-flex flex-row gap-3 align-items-center col-5 rounded-3">
-            <img src="foto-perfil.jpg" class="foto-perfil col-2 ms-2 rounded-3">
-            <div class="m-2">
-                <h2>Leonardo Chiari Maciel</h2>
-                <p>Idade: 20</p>
-                <p>Camisa: 10</p>
-                <p>Posição: PD</p>
-                <p>Gols: 443</p>
-                <p>Assistências: 227</p>
-            </div>
     </section>
+ 
+    <section>
+        <div class="col-6">
+            <div class="d-flex flex-column gap-5 m-5">
+                <div class="d-flex flex-column gap-3">
+                    <h1 class="text-white">Seleção PD Case</h1>
+                    <h2 class="text-white">Qual alteração você deseja fazer?</h2>
+                    <button class="botoes">Adicionar um novo jogador</button>
+                    <button class="botoes">Remover um jogador</button>
+                    <button class="botoes">Editar um jogador</button>
+                </div>
+ 
+                <form id="adicionar-jogador" class="d-flex flex-column gap-3">
+                    <h2 class="text-white">Preencha os dados do novo jogador</h2>
+                    <div id="inputs" class="d-flex flex-row flex-wrap gap-3">
+                        <input type="text" id="nome" placeholder="Nome do Jogador" class="caixas-texto">
+                        <input type="number" id="idade" placeholder="Idade do Jogador" class="caixas-texto">
+                        <input type="number" id="camisa" placeholder="Número da Camisa" class="caixas-texto">
+                        <input type="text" id="posicao" placeholder="Posição do Jogador" class="caixas-texto">
+                        <input type="number" id="gols" placeholder="Gols Marcados" class="caixas-texto">
+                        <input type="number" id="assistencias" placeholder="Assistências" class="caixas-texto">
+                    </div>
+                    <button class="botoes" id="adicionar">Adicionar Jogador</button>
+                </form>
+ 
+                <form id="remover-jogador" class="d-flex flex-column gap-3">
+                    <h2 class="text-white">Digite o nome do jogador que deseja remover:</h2>
+                    <input type="text" id="nome-remover" placeholder="ID do Jogador a Remover" class="caixas-texto">
+                    <button class="botoes" id="remover">Remover Jogador</button>
+                </form>
+ 
+                <form id="editar-jogador" class="d-flex flex-column gap-3">
+                    <div>
+                        <h2 class="text-white">Se não quiser editar algum campo, deixe em branco.</h2>
+                        <div class="d-flex flex-row flex-wrap gap-3">
+                            <input type="text" id="nome" placeholder="Nome do Jogador" class="caixas-texto">
+                            <input type="number" id="idade" placeholder="Idade do Jogador" class="caixas-texto">
+                            <input type="number" id="camisa" placeholder="Número da Camisa" class="caixas-texto">
+                            <input type="text" id="posicao" placeholder="Posição do Jogador" class="caixas-texto">
+                            <input type="number" id="gols" placeholder="Gols Marcados" class="caixas-texto">
+                            <input type="number" id="assistencias" placeholder="Assistências" class="caixas-texto">
+                        </div>
+                    </div>
+                    <button class="botoes" id="editar">Editar Jogador</button>
+                </form>
+    <script src="script.js"></script>
 </body>
 </html>

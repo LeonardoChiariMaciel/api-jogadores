@@ -36,3 +36,18 @@
 .foto-perfil {
     width: 15rem;
 }
+
+
+.botoes {
+    width: 15rem;
+    height: 3rem;
+    border-radius: 12px;
+    border-style: none;
+}
+
+.caixas-texto {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 12px;
+    border-style: none;
+}

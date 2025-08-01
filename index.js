@@ -1,6 +1,11 @@
-const express = require('express');
+//isso permite que façamos alteracoes de outras maquinas
+import cors from 'cors';
+import express, { json } from 'express';
 const app = express();
 const port = 3000;
+
+app.use(cors());
+app.use(json());
 
 const pessoas = [
     {
@@ -52,7 +57,7 @@ const pessoas = [
 
 //rota principal
 app.get('/', (req, res) => {
-    res.send("Bem-vindo");
+    res.send("Seja bem vindo, adicione um '/pessoas' à URL para visualizar as pessoas cadastradas na API");
 });
 
 //rota para listar todas as pessoas
@@ -71,7 +76,7 @@ app.get('/pessoas/:id', (req, res) => {
 });
 
 //post -> adicionar nova pessoa
-app.use(express.json()); //serve para posts e puts]
+app.use(json()); //serve para posts e puts]
 
 app.post('/pessoas', (req, res) => {
     const { nome, idade, camisa, posição, gols, assistências } = req.body;
