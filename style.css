@@ -1,0 +1,38 @@
+.fundo {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, #013220, #024c2a, #016636, #014d2e);
+    background-size: 400% 400%;
+    animation: fundoVerde 12s ease infinite;
+}
+
+@keyframes fundoVerde {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.f18 {
+    font-size: 18px;
+}
+
+.semibold {
+    font-weight: semibold;
+}
+
+.article-jogador {
+    background-color: white;
+}
+
+.foto-perfil {
+    width: 15rem;
+}

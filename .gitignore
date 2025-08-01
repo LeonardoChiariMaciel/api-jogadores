@@ -1,0 +1,22 @@
+# Ignorar a pasta com dependências instaladas
+node_modules/
+
+# Ignorar arquivos de ambiente com dados sensíveis
+.env
+
+# Ignorar logs da aplicação
+*.log
+
+# Ignorar cache do sistema
+.DS_Store
+
+# Ignorar arquivos do VS Code
+.vscode/
+
+# Ignorar pastas temporárias
+tmp/
+temp/
+
+# Ignore o output do sistema do Render (se usar algum build)
+build/
+dist/

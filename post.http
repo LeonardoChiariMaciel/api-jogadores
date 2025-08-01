@@ -1,0 +1,11 @@
+POST http://localhost:3000/pessoas
+Content-Type: application/json
+
+{
+    "nome": "Marcus Maciel",
+    "idade": 62,
+    "camisa": 12,
+    "posição": "ATA",
+    "gols": 235,
+    "assistências": 400
+}
