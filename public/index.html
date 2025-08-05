@@ -7,54 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <title>Seleção PD Case</title>
 </head>
-<body class="fundo">
+<body class="fundo d-flex flex-row">
  
-    <section id="agrupador-de-cards" class="d-flex flex-row flex-wrap gap-5 justify-content-center mt-5 mb-5">
+    <section id="agrupador-de-cards" class="d-flex flex-row flex-wrap gap-5 justify-content-center mt-5 mb-5 col-7">
+
     </section>
- 
-    <section>
-        <div class="col-6">
+
+    <section class="col-5">
+        <div class="">
             <div class="d-flex flex-column gap-5 m-5">
                 <div class="d-flex flex-column gap-3">
                     <h1 class="text-white">Seleção PD Case</h1>
                     <h2 class="text-white">Qual alteração você deseja fazer?</h2>
-                    <button class="botoes">Adicionar um novo jogador</button>
-                    <button class="botoes">Remover um jogador</button>
-                    <button class="botoes">Editar um jogador</button>
+                    <button class="botoes" onclick="quero_adicionar('adicionar-jogador')">Adicionar um novo jogador</button>
+                    <button class="botoes" onclick="quero_adicionar('remover-jogador')">Remover um jogador</button>
+                    <button class="botoes" onclick="quero_adicionar('editar-jogador')">Editar um jogador</button>
                 </div>
- 
-                <form id="adicionar-jogador" class="d-flex flex-column gap-3">
+
+                <form id="adicionar-jogador" class="d-none d-flex flex-column gap-3">
                     <h2 class="text-white">Preencha os dados do novo jogador</h2>
                     <div id="inputs" class="d-flex flex-row flex-wrap gap-3">
-                        <input type="text" id="nome" placeholder="Nome do Jogador" class="caixas-texto">
-                        <input type="number" id="idade" placeholder="Idade do Jogador" class="caixas-texto">
-                        <input type="number" id="camisa" placeholder="Número da Camisa" class="caixas-texto">
-                        <input type="text" id="posicao" placeholder="Posição do Jogador" class="caixas-texto">
-                        <input type="number" id="gols" placeholder="Gols Marcados" class="caixas-texto">
-                        <input type="number" id="assistencias" placeholder="Assistências" class="caixas-texto">
+                        <input type="text" id="postnome" placeholder="Nome do Jogador" class="caixas-texto">
+                        <input type="number" id="postidade" placeholder="Idade do Jogador" class="caixas-texto">
+                        <input type="number" id="postcamisa" placeholder="Número da Camisa" class="caixas-texto">
+                        <input type="text" id="postposicao" placeholder="Posição do Jogador" class="caixas-texto">
+                        <input type="number" id="postgols" placeholder="Gols Marcados" class="caixas-texto">
+                        <input type="number" id="postassistencias" placeholder="Assistências" class="caixas-texto">
                     </div>
-                    <button class="botoes" id="adicionar">Adicionar Jogador</button>
+                    <button class="botoes" id="adicionar" onclick="enviarFormulario(event)" onclick="location.reload()">Adicionar Jogador</button>
                 </form>
- 
-                <form id="remover-jogador" class="d-flex flex-column gap-3">
-                    <h2 class="text-white">Digite o nome do jogador que deseja remover:</h2>
-                    <input type="text" id="nome-remover" placeholder="ID do Jogador a Remover" class="caixas-texto">
-                    <button class="botoes" id="remover">Remover Jogador</button>
+
+                <form id="remover-jogador" class="d-none d-flex flex-column gap-3">
+                    <h2 class="text-white">Digite o ID do jogador que deseja remover:</h2>
+                    <input type="text" id="id-remover" placeholder="ID do Jogador a Remover" class="caixas-texto">
+                    <button class="botoes" id="remover" onclick="removerJogador(event)">Remover Jogador</button>
                 </form>
- 
-                <form id="editar-jogador" class="d-flex flex-column gap-3">
+
+                <form id="editar-jogador" class="d-none d-flex flex-column gap-3">
                     <div>
                         <h2 class="text-white">Se não quiser editar algum campo, deixe em branco.</h2>
                         <div class="d-flex flex-row flex-wrap gap-3">
-                            <input type="text" id="nome" placeholder="Nome do Jogador" class="caixas-texto">
-                            <input type="number" id="idade" placeholder="Idade do Jogador" class="caixas-texto">
-                            <input type="number" id="camisa" placeholder="Número da Camisa" class="caixas-texto">
-                            <input type="text" id="posicao" placeholder="Posição do Jogador" class="caixas-texto">
-                            <input type="number" id="gols" placeholder="Gols Marcados" class="caixas-texto">
-                            <input type="number" id="assistencias" placeholder="Assistências" class="caixas-texto">
+                            <input type="text" id="putid" placeholder="ID do Jogador" class="caixas-texto">
+                            <input type="text" id="putnome" placeholder="Nome do Jogador" class="caixas-texto">
+                            <input type="number" id="putidade" placeholder="Idade do Jogador" class="caixas-texto">
+                            <input type="number" id="putcamisa" placeholder="Número da Camisa" class="caixas-texto">
+                            <input type="text" id="putposicao" placeholder="Posição do Jogador" class="caixas-texto">
+                            <input type="number" id="putgols" placeholder="Gols Marcados" class="caixas-texto">
+                            <input type="number" id="putassistencias" placeholder="Assistências" class="caixas-texto">
                         </div>
                     </div>
-                    <button class="botoes" id="editar">Editar Jogador</button>
+                    <button class="botoes" id="editar" onclick="editarJogador(event)">Editar Jogador</button>
                 </form>
     <script src="script.js"></script>
 </body>

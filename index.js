@@ -48,7 +48,7 @@ const pessoas = [
         id: 5,
         nome: "Emanuel",
         idade: 11,
-        camisa: 7,
+        camisa: 11,
         posição: "VOL",
         gols: 97,
         assistências: 428
